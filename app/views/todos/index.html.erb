@@ -1,0 +1,26 @@
+  <div class="row">
+    <div class="span4">
+      <h1>Shared Todo App</h1>
+      <hr>
+      <p>All your todos here</p>
+<%= form_for @new_todo, :url => { :action => "add" }, remote: true do |f|  %>
+    <%= f.text_field  :name %>
+    <%= f.submit "Add todo", class: "btn btn-primary" %>
+ <%end%>
+      <div class="well">
+<%= form_tag("/todos/complete/", :method => "post") do %>
+<ul style="list-style-type:none;">
+<% @todo_items.each do |t| %> 
+    <% if t.completed == true %>
+     <li style="color:grey;"> <%= check_box_tag  "todos_checkbox[]",t.id %>  <strike><%= t.name %></strike> </li>
+  <% else %>
+     <li> <%= check_box_tag  "todos_checkbox[]",t.id %> <%= t.name %>  </li>
+  <% end %>
+<%end%>
+</ul>
+<%= submit_tag("Complete Todos", :class=>"btn btn-success") %>
+<%end %>
+      </div> <!-- well -->
+      <%= link_to "Delete last todo", delete_path %>
+    </div> <!-- span4 -->
+  </div> <!-- row -->

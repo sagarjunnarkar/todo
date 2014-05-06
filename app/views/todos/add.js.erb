@@ -1,0 +1,9 @@
+$("<%= j render(:partial => 'layouts/flash', :locals => {:flash => flash})%>").prependTo('div.container');
+<% if flash[:success] %>
+if ( $( "ul li" ).length ) {
+  $('ul li:last-child').append('<li style="color:grey;"><%= check_box_tag  "todos_checkbox[]",@todo.id %> <%= @todo.name %> </li>');
+}
+else {
+	$('ul').append('<li style="color:grey;"><%= check_box_tag  "todos_checkbox[]",@todo.id %> <%= @todo.name %> </li>');
+}
+<% end %>
