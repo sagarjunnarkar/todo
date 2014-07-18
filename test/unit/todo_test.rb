@@ -6,8 +6,8 @@ class TodoTest < ActiveSupport::TestCase
     assert !todo.save
   end
 
-  test "should save todo with name" do
-    todo = Todo.new(name: '')
+  test "should save todo with name sagar" do
+    todo = Todo.new(name: 'sagar')
     assert todo.save
   end
 
@@ -17,7 +17,7 @@ class TodoTest < ActiveSupport::TestCase
   end
 
   test "should not save todo with status false" do
-    todo = Todo.new(name: 'sagar', status: false)
-    assert !todo.save
+    todo = Todo.new(name: 'sagar', status: true)
+    assert todo.save
   end
 end
