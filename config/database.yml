@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: TodoApp_development
   pool: 5
-  username: sagar
+  username: postgres
   password: password
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,13 +43,12 @@ test:
   encoding: unicode
   database: TodoApp_test
   pool: 5
-  username: sagar
-  password: password
+  username: postgres
 
 production:
   adapter: postgresql
   encoding: unicode
   database: TodoApp_production
   pool: 5
-  username: sagar
+  username: postgres
   password: password
