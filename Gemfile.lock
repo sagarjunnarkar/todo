@@ -43,6 +43,9 @@ GEM
     capistrano-rvm (0.1.1)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano-thin (1.1.0)
+      capistrano (~> 3.0)
+      thin (~> 1.6)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -51,10 +54,12 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     colorize (0.7.3)
+    daemons (1.1.9)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (2.0.2)
     hike (1.2.3)
     i18n (0.6.1)
@@ -117,6 +122,10 @@ GEM
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
+    thin (1.6.3)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0)
+      rack (~> 1.0)
     thor (0.19.1)
     tilt (1.4.1)
     treetop (1.4.15)
@@ -135,6 +144,7 @@ DEPENDENCIES
   capistrano-bundler (~> 1.1.2)
   capistrano-rails
   capistrano-rvm
+  capistrano-thin
   coffee-rails (~> 3.2.1)
   dotenv
   dotenv-deployment
@@ -143,4 +153,5 @@ DEPENDENCIES
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   therubyracer
+  thin
   uglifier (>= 1.0.3)

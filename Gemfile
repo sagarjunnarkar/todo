@@ -37,7 +37,10 @@ gem "dotenv-deployment"
 
 # To use debugger
 # gem 'debugger'
+gem 'thin'
+
 gem 'capistrano', '3.2.1'
 gem 'capistrano-rails' 
 gem 'capistrano-rvm'
 gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-thin'
